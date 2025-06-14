@@ -8,7 +8,7 @@ void Procesador::centering(const string& text) {
     int wide = info.srWindow.Right - info.srWindow.Left + 1;
     int space = (wide - text.length()) / 2;
 
-    cout << string(space, ' ') << text << endl;
+    cout << left << string(space, ' ') << text << endl;
 }
 
 int Procesador::ProcesarArgumentos(int argc, char* argv[]){
@@ -56,19 +56,42 @@ int Procesador::ProcesarArgumentos(int argc, char* argv[]){
     return 0;
 }
 
+//void Procesador::MostrarAyuda() {
+//    cout << "\nUso:" << amarillo << "Figuras_Planas.exe " << reset << "<figura>" << fondoMagenta << "<parametros>" << reset << endl;
+//	cout << "     Calculos de perimetro y area de figuras planas." << endl;
+//    cout << "     Donde:" << endl;
+//    cout << setw(13) << "           ACCION:\n";
+//    centering(string(amarillo) + "Ayuda" + string(blanco) + " | " + "Información sobre el uso del programa.\n\n");
+//    centering(string(amarillo) + "Triángulo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b c h" + string(reset));
+//    centering(string(amarillo) + "Paralelogramo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b h" + string(reset));
+//    centering(string(amarillo) + "Rectángulo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b" + string(reset));
+//    centering(string(amarillo) + "Cuadrado" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a" + string(reset));
+//    centering(string(amarillo) + "Rombo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b D" + string(reset));
+//    centering(string(amarillo) + "Cometa" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b d D" + string(reset));
+//    centering(string(amarillo) + "Trapecio" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b c h B" + string(reset));
+//    centering(string(amarillo) + "Círculo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "r" + string(reset));
+//    cout << endl;
+//}
+
 void Procesador::MostrarAyuda() {
-    cout << "\nUso:" << amarillo << "Figuras_Planas.exe " << reset << "<figura>" << fondoMagenta << "<parametros>" << reset << endl;
-	cout << "     Calculos de perimetro y area de figuras planas." << endl;
-    cout << "     Donde:" << endl;
-    cout << setw(13) << "           ACCION:\n";
-    centering(string(amarillo) + "Ayuda" + string(blanco) + " | " + "Información sobre el uso del programa.\n\n");
-    centering(string(amarillo) + "Triángulo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b c h" + string(reset));
-    centering(string(amarillo) + "Paralelogramo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b h" + string(reset));
-    centering(string(amarillo) + "Rectángulo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b" + string(reset));
-    centering(string(amarillo) + "Cuadrado" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a" + string(reset));
-    centering(string(amarillo) + "Rombo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b D" + string(reset));
-    centering(string(amarillo) + "Cometa" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b d D" + string(reset));
-    centering(string(amarillo) + "Trapecio" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b c h B" + string(reset));
-    centering(string(amarillo) + "Círculo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "r" + string(reset));
-    cout << endl;
+
+    centering(std::string(verde) + "Uso: Figuras_Planas.exe ACCION [VARIABLES]" + reset);
+    centering("Calculos de perímetro y área de Figuras Planas.");
+    centering("Donde:");
+    centering("ACCION");
+    vector<string> tabla = {
+        "ayuda            | Información sobre el uso del programa.",
+        "triángulo        | VARIABLES: a b c h                    ",
+        "paralelogramo    | VARIABLES: a b h                      ",
+        "rectángulo       | VARIABLES: a b                        ",
+        "cuadrado         | VARIABLES: a                          ",
+        "rombo            | VARIABLES: a d D                      ",
+        "cometa           | VARIABLES: a b d D                    ",
+        "trapecio         | VARIABLES: a b c h B                  ",
+        "círculo          | VARIABLES: r                          "
+    };
+    
+    for(string& linea : tabla) {
+        centering(linea);
+    }
 }
