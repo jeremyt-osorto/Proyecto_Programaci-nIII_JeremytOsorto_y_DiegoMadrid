@@ -11,7 +11,7 @@ void Procesador::centering(const string& text) {
     cout << string(space, ' ') << text << endl;
 }
 
-int Procesador::ProcesarArgumentos(char* argv[], int argc){
+int Procesador::ProcesarArgumentos(int argc, char* argv[]){
     if (argc < 2) {
         MostrarAyuda();
         return 0;
@@ -55,23 +55,6 @@ int Procesador::ProcesarArgumentos(char* argv[], int argc){
     }
     return 0;
 }
-
-//void Procesador::MostrarAyuda() {
-//    cout << "\nUso:" << amarillo << "Figuras_Planas.exe " << reset << "<figura>" << fondoMagenta << "<parametros>" << reset << endl;
-//	cout << "     Calculos de perimetro y area de figuras planas." << endl;
-//    cout << "     Donde:" << endl;
-//    cout << setw(13) << "           ACCION:\n";
-//    centering(string(amarillo) + "Ayuda" + string(blanco) + " | " + "Información sobre el uso del programa.\n\n");
-//    centering(string(amarillo) + "Triángulo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b c h" + string(reset));
-//    centering(string(amarillo) + "Paralelogramo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b h" + string(reset));
-//    centering(string(amarillo) + "Rectángulo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b" + string(reset));
-//    centering(string(amarillo) + "Cuadrado" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a" + string(reset));
-//    centering(string(amarillo) + "Rombo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b D" + string(reset));
-//    centering(string(amarillo) + "Cometa" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b d D" + string(reset));
-//    centering(string(amarillo) + "Trapecio" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "a b c h B" + string(reset));
-//    centering(string(amarillo) + "Círculo" + string(blanco) + " | " + "VARIABLES: " + string(fondoMagenta) + "r" + string(reset));
-//    cout << endl;
-//}
 
 void Procesador::MostrarAyuda() {
 

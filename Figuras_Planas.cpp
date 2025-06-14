@@ -7,5 +7,5 @@ int main(int argc, char* argv[]) {
     SetConsoleCP(1252);
     SetConsoleOutputCP(1252);
 	Procesador procesador;
-    return procesador.ProcesarArgumentos(argv, argc);
+    return procesador.ProcesarArgumentos(argc, argv);
 }
