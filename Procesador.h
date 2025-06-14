@@ -13,7 +13,7 @@ using namespace std;
 class Procesador {
 	void centering(const string& text);
 public:
-	int ProcesarArgumentos(int argc, char* argv[]);
+	int ProcesarArgumentos(char* argv[], int argc);
 	void MostrarAyuda();
 };
 

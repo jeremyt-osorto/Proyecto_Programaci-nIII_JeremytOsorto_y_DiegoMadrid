@@ -8,10 +8,10 @@ void Procesador::centering(const string& text) {
     int wide = info.srWindow.Right - info.srWindow.Left + 1;
     int space = (wide - text.length()) / 2;
 
-    cout << left << string(space, ' ') << text << endl;
+    cout << string(space, ' ') << text << endl;
 }
 
-int Procesador::ProcesarArgumentos(int argc, char* argv[]){
+int Procesador::ProcesarArgumentos(char* argv[], int argc){
     if (argc < 2) {
         MostrarAyuda();
         return 0;
@@ -75,20 +75,20 @@ int Procesador::ProcesarArgumentos(int argc, char* argv[]){
 
 void Procesador::MostrarAyuda() {
 
-    centering("Uso: Figuras_Planas.exe ACCION [VARIABLES]" + reset);
-    centering("Calculos de perímetro y área de Figuras Planas.");
-    centering("Donde:");
-    centering("ACCION");
+    cout << left << reset + "Uso:" + amarillo + "Figuras_Planas.exe" + reset + "ACCION " + fondoMagenta + "[VARIABLES]" + reset << endl;
+    cout << setw(10) << "Calculos de perímetro y área de Figuras Planas." << endl;
+    cout << setw(10) << "Donde:" << endl;
+    cout << setw(20) << "ACCION" << endl;
     vector<string> tabla = {
-        "ayuda            | Información sobre el uso del programa.\n",
-        "triángulo        | VARIABLES: a b c h                    ",
-        "paralelogramo    | VARIABLES: a b h                      ",
-        "rectángulo       | VARIABLES: a b                        ",
-        "cuadrado         | VARIABLES: a                          ",
-        "rombo            | VARIABLES: a d D                      ",
-        "cometa           | VARIABLES: a b d D                    ",
-        "trapecio         | VARIABLES: a b c h B                  ",
-        "círculo          | VARIABLES: r                          "
+        string(amarillo) + "ayuda" + string(reset) + "    | Información sobre el uso del programa." + "\n",
+        string(amarillo) + "triángulo" + string(reset) + "        | VARIABLES: " + string(fondoMagenta) + "a b c h" + string(reset) + "                    ",
+        string(amarillo) + "paralelogramo" + string(reset) + "    | VARIABLES: " + string(fondoMagenta) + "a b h" + string(reset) + "                      ",
+        string(amarillo) + "rectángulo" + string(reset) + "       | VARIABLES: " + string(fondoMagenta) + "a b" + string(reset) + "                        ",
+        string(amarillo) + "cuadrado" + string(reset) + "         | VARIABLES: " + string(fondoMagenta) + "a" + string(reset) + "                          ",
+        string(amarillo) + "rombo" + string(reset) + "            | VARIABLES: " + string(fondoMagenta) + "a d D" + string(reset) + "                      ",
+        string(amarillo) + "cometa" + string(reset) + "           | VARIABLES: " + string(fondoMagenta) + "a b d D" + string(reset) + "                    ",
+        string(amarillo) + "trapecio" + string(reset) + "         | VARIABLES: " + string(fondoMagenta) + "a b c h B" + string(reset) + "                  ",
+        string(amarillo) + "círculo" + string(reset) + "          | VARIABLES: " + string(fondoMagenta) + "r" + string(reset) + "                          "
     };
     
     for(string& linea : tabla) {
