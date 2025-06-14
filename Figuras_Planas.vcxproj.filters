@@ -18,9 +18,6 @@
     <ClCompile Include="Figuras_Planas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Procesador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Triangulo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,6 +28,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Archivo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Procesador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

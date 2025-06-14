@@ -1,8 +1,4 @@
 #include "Rectangulo.h"
-#include "Archivo.h"
-#include "Colores.h"
-#include <iostream>
-#include <iomanip>
 
 Rectangulo::Rectangulo(double largo, double ancho) : largo(largo), ancho(ancho) {}
 
@@ -15,8 +11,6 @@ double Rectangulo::CalcularArea() const {
 }
 
 void Rectangulo::Dibujar() const {
-    using namespace std;
-    using namespace Color;
     string plantilla = LeerArchivo("Recursos/rectangulo.txt");
     plantilla = Reemplazar(plantilla, "{largo}", largo);
     plantilla = Reemplazar(plantilla, "{ancho}", ancho);

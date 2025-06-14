@@ -16,4 +16,10 @@ namespace Color {
     const string fondoVerde = "\033[42m";
     const string fondoAmarillo = "\033[43m";
     const string fondoAzul = "\033[44m";
+	const string fondoMagenta = "\033[45m";
+
+    // Hola ingeniero, saludos de Madrid y Jeremyt
+	// Usamos codigos ANSI, 31-37 son colores de texto, 41-44 son colores de fondo
+    // \033 es un caracter de escape que regresa al valor default
+    // Por eso tenemos reset como \033[0m para resetear al color default
 }

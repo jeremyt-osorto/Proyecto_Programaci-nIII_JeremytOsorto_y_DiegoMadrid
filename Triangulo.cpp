@@ -1,10 +1,7 @@
 #include "Triangulo.h"
-#include "Archivo.h"
-#include "Colores.h"
-#include <iostream>
-#include <iomanip>
 
-Triangulo::Triangulo(double base, double altura, double lado) : base(base), altura(altura), lado(lado) {}
+Triangulo::Triangulo(double base, double altura, double lado) 
+    : base(base), altura(altura), lado(lado) {}
 
 double Triangulo::CalcularPerimetro() const {
     return base + 2 * lado;
@@ -15,8 +12,6 @@ double Triangulo::CalcularArea() const {
 }
 
 void Triangulo::Dibujar() const {
-    using namespace std;
-    using namespace Color;
     string plantilla = LeerArchivo("Recursos/triangulo.txt");
     plantilla = Reemplazar(plantilla, "{base}", base);
     plantilla = Reemplazar(plantilla, "{altura}", altura);

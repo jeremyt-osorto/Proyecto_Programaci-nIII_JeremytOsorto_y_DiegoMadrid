@@ -1,8 +1,4 @@
 #include "Paralelogramo.h"
-#include "Archivo.h"
-#include "Colores.h"
-#include <iostream>
-#include <iomanip>
 
 Paralelogramo::Paralelogramo(double a, double b, double h) : a(a), b(b), h(h) {}
 
@@ -15,8 +11,6 @@ double Paralelogramo::CalcularArea() const {
 }
 
 void Paralelogramo::Dibujar() const {
-    using namespace std;
-    using namespace Color;
     string plantilla = LeerArchivo("Recursos/paralelogramo.txt");
     plantilla = Reemplazar(plantilla, "{a}", a);
     plantilla = Reemplazar(plantilla, "{b}", b);
