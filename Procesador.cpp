@@ -75,12 +75,12 @@ int Procesador::ProcesarArgumentos(int argc, char* argv[]){
 
 void Procesador::MostrarAyuda() {
 
-    centering(std::string(verde) + "Uso: Figuras_Planas.exe ACCION [VARIABLES]" + reset);
+    centering("Uso: Figuras_Planas.exe ACCION [VARIABLES]" + reset);
     centering("Calculos de perímetro y área de Figuras Planas.");
     centering("Donde:");
     centering("ACCION");
     vector<string> tabla = {
-        "ayuda            | Información sobre el uso del programa.",
+        "ayuda            | Información sobre el uso del programa.\n",
         "triángulo        | VARIABLES: a b c h                    ",
         "paralelogramo    | VARIABLES: a b h                      ",
         "rectángulo       | VARIABLES: a b                        ",
