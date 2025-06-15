@@ -1,0 +1,13 @@
+﻿  Archivo.cpp
+  Figuras_Planas.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  Paralelogramo.cpp
+  Procesador.cpp
+C:\Users\DELL\Desktop\Proyecto_Programaci-nIII_JeremytOsorto_y_DiegoMadrid\Procesador.cpp(9,15): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Rectangulo.cpp
+  Triangulo.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 1143 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Figuras_Planas.vcxproj -> C:\Users\DELL\Desktop\Proyecto_Programaci-nIII_JeremytOsorto_y_DiegoMadrid\x64\Release\Figuras_Planas.exe
