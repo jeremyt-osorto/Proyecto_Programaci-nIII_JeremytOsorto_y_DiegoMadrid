@@ -1,5 +1,6 @@
 #include "Paralelogramo.h"
 
+
 Paralelogramo::Paralelogramo(double a, double b, double h) : a(a), b(b), h(h) {}
 
 double Paralelogramo::CalcularPerimetro() const {
@@ -11,7 +12,7 @@ double Paralelogramo::CalcularArea() const {
 }
 
 void Paralelogramo::Dibujar() const {
-    string plantilla = LeerArchivo("../../Recursos/paralelogramo.txt");
+    string plantilla = LeerArchivo("Recursos/paralelogramo.txt");
     plantilla = Reemplazar(plantilla, "{a}", a);
     plantilla = Reemplazar(plantilla, "{b}", b);
     plantilla = Reemplazar(plantilla, "{h}", h);
