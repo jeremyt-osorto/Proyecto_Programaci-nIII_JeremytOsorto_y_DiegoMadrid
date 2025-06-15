@@ -1,11 +1,10 @@
 #include "Archivo.h"
-#include <fstream>
-#include <sstream>
-#include <regex>
 
 string LeerArchivo(const string& ruta) {
     ifstream archivo(ruta);
-    if (!archivo.is_open()) return "[Error: no se pudo abrir el archivo]";
+    if (!archivo.is_open()) {
+        return "[Error: no se pudo abrir el archivo]";
+    }
 
     stringstream buffer;
     buffer << archivo.rdbuf();
